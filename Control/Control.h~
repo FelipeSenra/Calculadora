@@ -1,0 +1,23 @@
+#ifndef GRAMMAR_H
+#define GRAMMAR_H
+#include <string>
+namespace controle{
+enum ERRO{
+STRING,
+CORE,
+};
+
+class Control
+{
+ public:
+  Control getInstance();
+  void enablePrint(); 
+  void disablePrint();
+  bool ToPrint();
+ private:
+  static Control *instance;
+  bool toPrint;
+  Control();
+};
+}
+#endif

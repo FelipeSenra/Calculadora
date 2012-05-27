@@ -1,0 +1,40 @@
+g++ -I Kernel/Kernel.cpp Kernel/Kernel.h Grammar/Grammar.h Grammar/Grammar.cpp Control/Control.h Control/Control.cpp main.cpp  -oCalculadora 
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+Kernel/Kernel.h:38:15: erro: expected ‘)’ before ‘control’
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+Grammar/Grammar.cpp:5:17: erro: ‘controle’ is not a namespace-name
+Grammar/Grammar.cpp:5:26: erro: expected namespace-name before ‘;’ token
+Grammar/Grammar.cpp: Em função membro estática ‘static grammar::Node grammar::Node::Parse(std::string)’:
+Grammar/Grammar.cpp:118:3: erro: ‘controle’ has not been declared
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+Control/Control.cpp: Na função membro ‘void controle::Control::enablePrint()’:
+Control/Control.cpp:6:35: erro: invalid use of member (did you forget the ‘&’ ?)
+Control/Control.cpp: Na função membro ‘void controle::Control::disablePrint()’:
+Control/Control.cpp:10:31: erro: invalid use of member (did you forget the ‘&’ ?)
+Control/Control.cpp: Na função membro ‘bool controle::Control::ToPrint()’:
+Control/Control.cpp:17:32: erro: base operand of ‘->’ has non-pointer type ‘controle::Control’
+Control/Control.cpp: No escopo global:
+Control/Control.cpp:20:37: erro: cannot declare member function ‘controle::Control controle::Control::getInstance()’ to have static linkage [-fpermissive]
+Control/Control.cpp: Na função membro ‘controle::Control controle::Control::getInstance()’:
+Control/Control.cpp:22:16: erro: could not convert ‘controle::Control::instance’ from ‘controle::Control*’ to ‘controle::Control’
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+main.cpp:42:1: erro: stray ‘\32’ in program
+In file included from main.cpp:5:0:
+Kernel/Kernel.h:38:15: erro: expected ‘)’ before ‘control’
+main.cpp:8:17: erro: ‘controle’ is not a namespace-name
+main.cpp:8:25: erro: expected namespace-name before ‘;’ token
+main.cpp: Na função ‘int main(int, char**)’:
+main.cpp:16:3: erro: ‘controle’ has not been declared
+main.cpp:16:18: erro: expected ‘;’ before ‘core’
+main.cpp:21:2: erro: ‘core’ has not been declared
+main.cpp:23:30: erro: expected primary-expression before ‘frase’
+main.cpp:24:2: erro: ‘core’ has not been declared
+main.cpp:25:5: erro: ‘Control’ has not been declared
+main.cpp:26:10: erro: expected primary-expression before ‘;’ token
+main.cpp:29:12: erro: expected type-specifier before ‘CORE’
+main.cpp:33:11: erro: expected type-specifier before ‘STRING’
+make: ** [Calculadora] Erro 1
+
+

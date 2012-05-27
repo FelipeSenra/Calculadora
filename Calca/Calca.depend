@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1338124516 source:/home/felipe/Calculadora/Control/Control.cpp
+	<iostream>
+	"Control.h"
+
+1338123991 /home/felipe/Calculadora/Control/Control.h
+	<string>
+
+1338121569 source:/home/felipe/Calculadora/Grammar/Grammar.cpp
+	"Grammar.h"
+
+1338121357 /home/felipe/Calculadora/Grammar/Grammar.h
+	<string>
+
+1338123345 source:/home/felipe/Calculadora/Kernel/Kernel.cpp
+	"Kernel.h"
+	"../Grammar/Grammar.h"
+	<string>
+	<vector>
+	<iostream>
+	<stdexcept>
+	<vector>
+
+1338123707 /home/felipe/Calculadora/Kernel/Kernel.h
+	"../Grammar/Grammar.h"
+	"../Control/Control.h"
+	<string>
+	<vector>
+
+1338122426 source:/home/felipe/Calculadora/Kernel/Test1.cpp
+	<iostream>
+

@@ -1,8 +1,10 @@
  #ifndef KERNEL
  #include "../Grammar/Grammar.h"
+ #include "../Control/Control.h"
  #include <string>
  #include <vector>
-
+ using namespace grammar ;
+ //using namespace controle ;
  class Variable{
   // Lista de Variaveis
 	std::string type ;
@@ -27,13 +29,15 @@
  {
   // Lista de Variaveis
    	std::vector<Node> listadeNos ;
-   	Tree ArvoreLexica;  
+   	Node ArvoreLexica;  
    	bool IsRead ; 
+	int Error;	
    	std::vector<Variable> listV ;
    public :
 	Core();
+	Core(Control control);
 	~Core();
-    	Node ExecuteOp(Tree ArvoreLexica);
+    	Node ExecuteOp(Node ArvoreLexica);
     	Variable GetVariable(int i);
     	void SetVariable(int i, Node value);
    private :

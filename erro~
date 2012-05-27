@@ -1,0 +1,34 @@
+g++ -I Kernel/Kernel.cpp Kernel/Kernel.h Grammar/Grammar.h Grammar/Grammar.cpp Control/Control.h Control/Control.cpp main.cpp  -oCalculadora 
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+Kernel/Kernel.h:7:18: erro: ‘controle’ is not a namespace-name
+Kernel/Kernel.h:7:27: erro: expected namespace-name before ‘;’ token
+Kernel/Kernel.h:38:15: erro: expected ‘)’ before ‘control’
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+Grammar/Grammar.cpp: Em função membro estática ‘static grammar::Node grammar::Node::Parse(std::string)’:
+Grammar/Grammar.cpp:117:3: erro: ‘Control’ has not been declared
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+Control/Control.h:13:4: erro: ISO C++ forbids declaration of ‘Control’ with no type [-fpermissive]
+Control/Control.h:13:4: erro: expected ‘;’ at end of member declaration
+Control/Control.h:13:24: erro: ISO C++ forbids declaration of ‘getInstance’ with no type [-fpermissive]
+Control/Control.h:18:10: erro: ‘Control’ does not name a type
+Control/Control.h:13:4: erro: field ‘int* controle::Control::Control’ with same name as class [-fpermissive]
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+In file included from Control/Control.cpp:2:0:
+Control/Control.h:13:4: erro: ISO C++ forbids declaration of ‘Control’ with no type [-fpermissive]
+Control/Control.h:13:4: erro: expected ‘;’ at end of member declaration
+Control/Control.h:13:24: erro: ISO C++ forbids declaration of ‘getInstance’ with no type [-fpermissive]
+Control/Control.h:18:10: erro: ‘Control’ does not name a type
+Control/Control.h:13:4: erro: field ‘int* controle::Control::Control’ with same name as class [-fpermissive]
+Control/Control.cpp: Na função membro ‘void controle::Control::enablePrint()’:
+Control/Control.cpp:6:25: erro: request for member ‘ToPrint’ in ‘controle::Control::getInstance()’, which is of non-class type ‘int’
+Control/Control.cpp: Na função membro ‘void controle::Control::disablePrint()’:
+Control/Control.cpp:10:2: erro: ‘instance’ is not a member of ‘controle::Control’
+Control/Control.cpp: Na função membro ‘bool controle::Control::ToPrint()’:
+Control/Control.cpp:17:32: erro: base operand of ‘->’ is not a pointer
+Control/Control.cpp: No escopo global:
+Control/Control.cpp:20:17: erro: expected initializer before ‘Control’
+cc1plus: aviso: Kernel/Kernel.cpp: not a directory [habilitado por padrão]
+main.cpp:3:31: erro fatal: /Control/Control.h: Arquivo ou diretório não encontrado
+compilação terminada.
+

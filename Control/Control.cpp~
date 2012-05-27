@@ -1,0 +1,25 @@
+#include <iostream>
+#include "Control.h"
+using namespace controle ;
+using namespace std; 
+void Control::enablePrint(){
+	Control::getInstance().ToPrint = true ;
+}
+
+void Control::disablePrint(){
+	Control::instance->ToPrint = false ;
+}
+Control::Control()
+{
+   this->toPrint = false ;
+}
+bool Control::ToPrint(){
+  return Control::getInstance()->toPrint;
+}
+
+ Control Control::getInstance(){
+     if (!instance) instance = new Control();
+        return *instance;
+}
+
+

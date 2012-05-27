@@ -15,9 +15,6 @@ CC=g++
 all: $(MYPROGRAM)
 test1: $(TEST1)
 
-.cpp.o:
-	$(CC) $(CFLAGS) $< -o $@
-
 
 $(MYPROGRAM): $(SOURCE)
 
