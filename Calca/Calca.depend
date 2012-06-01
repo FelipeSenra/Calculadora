@@ -3,16 +3,16 @@
 	<iostream>
 	"Control.h"
 
-1338123991 /home/felipe/Calculadora/Control/Control.h
+1338129781 /home/felipe/Calculadora/Control/Control.h
 	<string>
 
 1338121569 source:/home/felipe/Calculadora/Grammar/Grammar.cpp
 	"Grammar.h"
 
-1338121357 /home/felipe/Calculadora/Grammar/Grammar.h
+1338128819 /home/felipe/Calculadora/Grammar/Grammar.h
 	<string>
 
-1338123345 source:/home/felipe/Calculadora/Kernel/Kernel.cpp
+1338129287 source:/home/felipe/Calculadora/Kernel/Kernel.cpp
 	"Kernel.h"
 	"../Grammar/Grammar.h"
 	<string>
@@ -21,7 +21,7 @@
 	<stdexcept>
 	<vector>
 
-1338123707 /home/felipe/Calculadora/Kernel/Kernel.h
+1338125254 /home/felipe/Calculadora/Kernel/Kernel.h
 	"../Grammar/Grammar.h"
 	"../Control/Control.h"
 	<string>
@@ -29,4 +29,16 @@
 
 1338122426 source:/home/felipe/Calculadora/Kernel/Test1.cpp
 	<iostream>
+
+1338128395 source:/home/felipe/Calculadora/Interface/Interface.cpp
+	<string>
+	<iostream>
+	<vector>
+	"Interface.h"
+
+1338128106 /home/felipe/Calculadora/Interface/Interface.h
+	"../Control/Control.h"
+	<string>
+	<iostream>
+	<vector>
 

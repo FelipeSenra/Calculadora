@@ -1,5 +1,5 @@
 #ifndef CONTROL_H
-#define CONTROLR_H
+#define CONTROL_H "Control.h"
 #include <string>
 
 

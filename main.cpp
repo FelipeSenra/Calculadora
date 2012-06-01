@@ -2,6 +2,7 @@
 #include <string>
 #include <exception>
 #include "Grammar/Grammar.h"
+#include "Interface/Interface.h"
 #include "Control/Control.h"
 #include "Kernel/Kernel.h"
 
@@ -15,7 +16,7 @@ int main(int argc, char* argv[])
 {
   string frase ;
   cout<<"Calculadora de terminal\n"<<endl;
-  grammar::Node arvore;
+  grammar::Node *arvore;
   kernel::Core *core = new Core();
   Control *control = new Control();
   while (true)
@@ -29,7 +30,7 @@ int main(int argc, char* argv[])
 	if(control->ToPrint()){
 	cout << "ans:";
 	}
-    }catch(){
+    }catch(int e){
 
     }
   /*  catch(ERROCT::CORE)

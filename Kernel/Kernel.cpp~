@@ -30,7 +30,7 @@ Node Core::ExecuteOp(Node tree){
   Node Result new Result(); 
    switch (tree){
 		case PROGRAM:
-			if(tree.getType() == END)
+			if(tree.getType() == Token.END)
 				return Result;
 			else{
 				return ExecuteOp((ArvoreLexica)Result.Right());
@@ -71,7 +71,7 @@ Node Core::ExecuteOp(Node tree){
 			}
 		break;
 		case PRIMARY:
-			if(tree.middle() == NUMBER){
+			if(tree.middle() == Token.NUMBER){
 			
 			}else{
 				tree.middle().setValue(Core::GetVariable(tree.middle().getValue().index()));

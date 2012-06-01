@@ -2,10 +2,10 @@
 #include "Control.h"
 using namespace controlens;
 using namespace std;
+
 void Control::enablePrint(){
-	//Control::getInstance().toPrint =true;
-	//Control::getInstance().toPrint= true;
-	controlens::Control::instance->toPrint =true;
+
+	controlens::Control::getInstance()->toPrint =true;
 }
 
 void Control::disablePrint(){

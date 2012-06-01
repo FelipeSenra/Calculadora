@@ -1,20 +1,22 @@
 #include <iostream>
 #include "Control.h"
-using namespace controle ;
-using namespace std; 
+using namespace controlens;
+using namespace std;
 void Control::enablePrint(){
-	Control::getInstance().ToPrint = true ;
+	//Control::getInstance().toPrint =true;
+	//Control::getInstance().toPrint= true;
+	controlens::Control::instance->toPrint =true;
 }
 
 void Control::disablePrint(){
-	Control::instance->ToPrint = false ;
+	Control::instance->toPrint = false ;
 }
 Control::Control()
 {
    this->toPrint = false ;
 }
 bool Control::ToPrint(){
-  return Control::getInstance()->toPrint;
+  return Control::getInstance().toPrint;
 }
 
  Control Control::getInstance(){

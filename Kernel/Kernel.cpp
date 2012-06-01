@@ -1,14 +1,6 @@
- #include "Kernel.h"
+ #include "Kernel/Kernel.h"
  #include "../Grammar/Grammar.h"
-  #include <string>
- #include <vector>
- #include <iostream>
-#include <stdexcept>
-#include <vector>
-using namespace grammar;
-using namespace kernel;
-using namespace std;
-
+ 
 Core::Core(){
 
 }
@@ -19,13 +11,13 @@ expr_list END // END é ENTER
 expr_list:
 expression PRINT        // Print é “;”
 expression PRINT expr_list
-expression:
+expression: 
 expression + term
-expression - term
+expression - term 
 term
 term:
 term / primary
-term * primary
+term * primary 
 primary
 primary:
  NUMBER
@@ -34,25 +26,31 @@ NAME
 NAME = expression - primary
 ( expression )
 */
-double Core::ExecuteOp(Node tree){
-  Node *Result = new Node(tree);
-   switch (tree.getType() ){
+Node Core::ExecuteOp(Node tree){
+  Node Result new Result(); 
+   switch (tree){
 		case PROGRAM:
-				return ExecuteOp(Result->getLeft());
+			if(tree.getType() == Token.END)
+				return Result;
+			else{
+				return ExecuteOp((ArvoreLexica)Result.Right());
+			}
 		break;
 		case EXPR_LIST:
-                ExecuteOp(Result->getCenter());
-                ExecuteOp(Result->getRight());
-                return ExecuteOp(Result->getLeft());
-        break;
-		case END:
-				return 0.0;
+			if(tree == END){
+				return ExecuteOp((ArvoreLexica)Result.Right());
+			}
+			else{
+				ExecuteOp((ArvoreLexica)Result.Right());
+				if()
+				return ExecuteOp((ArvoreLexica)Result.Left());
+			}
 		break;
 		case EXPRESSION:
-			if(Result->getCenter() == PLUS){
+			if(tree.middle() == PLUS){
 				return ;
 			}else{
-			 if(Result->getCenter()  == MINUS){
+			 if(tree.middle() == MINUS){
 				return ;
 			 }
 			 else{
@@ -62,10 +60,10 @@ double Core::ExecuteOp(Node tree){
 		break;
 		case TERM:
 			if(tree.middle() == DIVIDE){
-
+			
 			}else{
 			 if(tree.middle() == MULT){
-
+			
 			 }
 			 else{
 
@@ -74,53 +72,35 @@ double Core::ExecuteOp(Node tree){
 		break;
 		case PRIMARY:
 			if(tree.middle() == Token.NUMBER){
-
+			
 			}else{
 				tree.middle().setValue(Core::GetVariable(tree.middle().getValue().index()));
 			}
 		break;
 
 		case NAME:
-
+		
 		break;
 	}
-  return Result;
+  return Result;  
  }
-
+ 
  Variable Core::GetVariable(int i){
-  return listV.at(i);
+  return listV.at(i);   
  }
 
-void Core::SetVariable(int i, Node *value){
-  try{
-  listV.at(i);
-
-  }
-  catch (out_of_range& oor) {
-   Variable *var = new Variable(value->getName());
-   var->getType();
-  // listV.insert(listV.size+1,var) ;
-  }
+void Core::SetVariable(int i, Node value){
+ swi listV.at(i) = value;
  }
 
 void Core::Warning(){
-/* if(this.Error && Controle.isReady()){
-
- }*/
+ if(this.Error && Controle.isReady()){
+ 
+ }
 }
 
-Variable::Variable(std::string name){
-this->type = name;
+Variable::Variable(){
+
 }
 
-std::string Variable::getType(){
-    return this->type;
-}
 
-double Variable::getValueD(){
- return this->dreal;
-}
-
-float Variable::getValueF(){
- return this->real;
-}

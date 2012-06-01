@@ -1,23 +1,29 @@
-#ifndef GRAMMAR_H
-#define GRAMMAR_H
+#ifndef CONTROL_H
+#define CONTROL_H
 #include <string>
-namespace controle{
-enum ERRO{
-STRING,
-CORE,
-};
 
-class Control
-{
+
+
+namespace controlens{
+
+
+
+class Control{
  public:
-  Control getInstance();
-  void enablePrint(); 
+  static Control getInstance();
+  void enablePrint();
   void disablePrint();
   bool ToPrint();
+  Control();
  private:
   static Control *instance;
   bool toPrint;
-  Control();
+
+};
+
+enum ERROCT{
+STRING,
+CORE
 };
 }
 #endif

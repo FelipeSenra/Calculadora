@@ -1,42 +1,47 @@
 #include <iostream>
 #include <string>
-#include "Grammar/Grammar.h" 
-#include "Control/Control.h" 
+#include <exception>
+#include "Grammar/Grammar.h"
+#include "Interface/Interface.h"
+#include "Control/Control.h"
 #include "Kernel/Kernel.h"
- 
+
 using namespace std;
-using namespace controle;
+using namespace controlens;
 using namespace grammar;
+using namespace kernel;
+using namespace interface;
 //----------------------------------------------------------------------------------------------------------
 int main(int argc, char* argv[])
 {
   string frase ;
   cout<<"Calculadora de terminal\n"<<endl;
   grammar::Node arvore;
-  controle::Core core = new Core();
+  kernel::Core *core = new Core();
+  Control *control = new Control();
   while (true)
   {
     try
-    {	
-	core->disablePrint();
-	cin >> frase;
-	arvore = Node::Parse(string frase);
-	core::ExecuteOp(arvore);
-	if(core->ToPrint()){
-	cout << ;		
-	}	
-    }
-    catch (controle::ERRO::CORE)
     {
-      break;
-    }
-    catch(controle::ERRO::STRING){
+	control->disablePrint();
+	cin >> frase;
+	arvore = Node::Parse(frase);
+	core->ExecuteOp(arvore);
+	if(control->ToPrint()){
+	cout << "ans:";
+	}
+    }catch(int e){
 
     }
+  /*  catch(ERROCT::CORE)
+    {
+      break;
+    };
+    catch(ERROCT::STRING){
+ break;
+    }*/
   }
   return 0;
 }
 
 //----------------------------------------------------------------------------------------------------------
-
-

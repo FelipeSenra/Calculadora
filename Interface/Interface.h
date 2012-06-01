@@ -1,4 +1,5 @@
  #ifndef INTER
+ #include "../Control/Control.h"
  #include <string>
  #include <iostream>
  #include <vector>
@@ -15,6 +16,6 @@ public :
 private:
 std::string frase ;
 
- }
+ };
  }
  #endif
