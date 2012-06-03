@@ -3,23 +3,34 @@
 using namespace grammar ;
 using namespace std; 
 using namespace controle ;
-
+/*
+Construtor da classe Node
+*/
 Node::Node(string type){
 this->Type = type;
 };
-
+/*
+Retorna no direito
+*/
 Node Node::getRight(){
  return *(this->Right) ;
 }
 
+/*
+define no direito
+*/
 void Node::setRight(Node right){
   this->Right = &right;
 }
-
+/*
+Retorna no direito
+*/
 Node Node::getAbove(){
  return *(this->Above) ;
 }
-
+/*
+Retorna no direito
+*/
 void Node::setAbove(Node above){
   this->Above = &above;
 }
@@ -47,6 +58,10 @@ std::string Node::getType(){
 void Node::setType(string type){
    this->Type = type;
 }
+
+/*
+Gera a Arvore a partir da string
+*/
 // supos que = copia o conteudo
  Node Node::Parse(string frase){
 	string str = frase;
