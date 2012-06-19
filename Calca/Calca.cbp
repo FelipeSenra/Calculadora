@@ -32,7 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="../Control/Control.cpp" />
+		<Unit filename="../Control/Control.h" />
+		<Unit filename="../Grammar/Grammar.cpp" />
+		<Unit filename="../Grammar/Grammar.h" />
+		<Unit filename="../Interface/Interface.cpp" />
+		<Unit filename="../Interface/Interface.h" />
+		<Unit filename="../Kernel/Kernel.cpp" />
+		<Unit filename="../Kernel/Kernel.h" />
+		<Unit filename="../Kernel/Test1.cpp" />
+		<Unit filename="../main.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
