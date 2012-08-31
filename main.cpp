@@ -15,32 +15,41 @@ using namespace interface;
 int main(int argc, char* argv[])
 {
   string frase ;
-  cout<<"Calculadora de terminal\n"<<endl;
-  grammar::Node *arvore;
-  kernel::Core *core = new Core();
-  Control *control = new Control();
+  grammar::Node arvore;
+  kernel::Core core;
+  Interface inter ;
+  Control::getInstance();
+  inter.MakeTitle();
   while (true)
   {
     try
     {
-	control->disablePrint();
-	cin >> frase;
-	arvore = Node::Parse(frase);
-	core->ExecuteOp(arvore);
-	if(control->ToPrint()){
-	cout << "ans:";
-	}
+//	Control::getInstance()->disablePrint();
+	inter.readConsole();
+    do{
+        Control::getInstance()->disablePrint();
+        frase = inter.getString();
+        if((frase == "EXIT")||(frase == "exit"))
+            return 0;
+        if((frase == "HELP")||(frase == "help")){
+            inter.PlotHelp();
+        break;
+        }
+        if(frase.size() != 0)
+            arvore = *Node::Parse(frase);
+        if(Control::getInstance()->ToPrint()){
+            cout << "ans:"<<core.ExecuteOp(&arvore)<<std::endl;
+        }else{
+        core.ExecuteOp(&arvore);
+        }
+    }while(inter.getindex() < inter.getsize());
     }catch(int e){
-
+    cout << "erro"<<endl ;
     }
-  /*  catch(ERROCT::CORE)
-    {
-      break;
-    };
-    catch(ERROCT::STRING){
- break;
-    }*/
   }
+
+
+
   return 0;
 }
 

@@ -1,57 +1,82 @@
 #ifndef GRAMMAR_H
 #define GRAMMAR_H
 #include <string>
+
+//#define NULL 0
 namespace grammar
 {
-using namespace std; 
+using namespace std;
 enum Token {
-		EQUAL,
-		PRINT, // ;
-            	NUMBER,
-                MULT,    // *
-                PLUS,     // +
-                DIV,          // /
-                MINUS, //-
-		END      // 
+        EQUAL,
+        PRINT, // ;
+        MULT, // *
+        PLUS, // +
+        DIVIDE, // /
+        MINUS, // -
+        LPARAM, //(
+        RPARAM, //)
+        NUMBER,
+        PROGRAM, //-
+        EXPR_LIST, //-
+        TERM,
+        PRIMARY, //-
+        NAME, //-
+        EXPRESSION,
+        NULLT,
+        END, //
+        ILEGIVEL
 };
-
-const string TOKEN[10]={
-		"="
+const string TOKEN[15]={
+		"=",
 		";",
-		"",
 		"*",
 		"+",
 		"/",
-		"-"
+		"-",
+		"(",
+		")",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"\n"
 };
 
 class Node
 {
-	private :
-		Node *Left ;
-		Node *Right;
-		Node *Center;
-		Node *Above;
-		string Type ;
-		string Name ;
-		int Ivalue ;
-		double Value;
-	public :
-		Node();
-		Node(string type);
-		Node getRight();
-		void setRight(Node right);
-		Node getLeft();
-		void setLeft(Node left);
-		Node getAbove();
-		void setAbove(Node above);
-
-		Node getCenter();
-		void setCenter(Node center);
-		std::string getType();
-		void setType(std::string type);
-		static Node Parse(std::string frase);
- };
+        private :
+            Node *Left ;
+            Node *Right;
+            Node *Center;
+            Node *Above;
+            Token Type ;
+            string Name ;
+            int Ivalue ;
+            double Value;
+        public :
+            Node();
+            ~Node();
+            Node(Token type);
+            Node* getRight();
+            void setRight(Node &right);
+            Node* getLeft();
+            void setLeft(Node &left);
+            Node* getAbove();
+            void setAbove(Node &above);
+            int getIvalue();
+            void setIvalue(Node &above);
+            double getValue();
+            void setValue(double above);
+            Node* getCenter();
+            void setCenter(Node &center);
+            std::string getName();
+            void setName(std::string name);
+            Token getType();
+            void setType(Token type);
+            static Node* Parse(std::string frase);
+};
 }
 #endif
- 
+

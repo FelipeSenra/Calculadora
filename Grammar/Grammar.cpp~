@@ -1,10 +1,10 @@
 #include "Grammar.h"
 
 using namespace grammar ;
-using namespace std;
-//using namespace controle ;
+using namespace std; 
+using namespace controle ;
 
-Node::Node(Token type){
+Node::Node(string type){
 this->Type = type;
 };
 
@@ -40,19 +40,11 @@ void Node::setCenter(Node center){
   this->Center = &center;
 };
 
-std::string Node::getName(){
-  return  Name ;
-}
-
-void Node::setCenter(std::string name){
-  Name = name ;
-}
-
-Token Node::getType(){
+std::string Node::getType(){	
   return this->Type;
 }
 
-void Node::setType(Token type){
+void Node::setType(string type){
    this->Type = type;
 }
 // supos que = copia o conteudo
@@ -61,69 +53,69 @@ void Node::setType(Token type){
 	string Temp,Temp2;
 	Node No,depois;
 	int pos ;
-	while(str.size() != 0){
+	while(str.size() != 0){	
 	if(string::npos != str.find(TOKEN[PLUS])){
 		pos =str.find(TOKEN[PLUS]);
 		Temp = str.substr (pos);
 		Temp2 = str.substr (0,pos);
-		No = *(new Node(PLUS));
+		No = *(new Node(TOKEN[PLUS]));
 		depois = Parse(Temp2);
 		No.setLeft(depois);
 		depois.setAbove(No);
 		depois = Parse(Temp);
 		No.setRight(depois);
-		depois.setAbove(No);
+		depois.setAbove(No);		
 	}
 	if(string::npos != str.find(TOKEN[MINUS])){
 		pos =str.find(TOKEN[MINUS]);
 		Temp = str.substr (pos);
 		Temp2 = str.substr (0,pos);
-		No = *(new Node(MINUS));
+		No = *(new Node(TOKEN[MINUS]));
 		depois = Parse(Temp2);
 		No.setLeft(depois);
 		depois.setAbove(No);
 		depois = Parse(Temp);
 		No.setRight(depois);
-		depois.setAbove(No);
+		depois.setAbove(No);		
 	}
 	if(string::npos != str.find(TOKEN[MULT])){
 		pos =str.find(TOKEN[MULT]);
 		Temp = str.substr (pos);
 		Temp2 = str.substr (0,pos);
-		No = *(new Node(MULT));
+		No = *(new Node(TOKEN[MULT]));
 		depois = Parse(Temp2);
 		No.setLeft(depois);
 		depois.setAbove(No);
 		depois = Parse(Temp);
 		No.setRight(depois);
-		depois.setAbove(No);
+		depois.setAbove(No);		
 	}
-	if(string::npos != str.find(TOKEN[DIVIDE])){
-		pos =str.find(TOKEN[DIVIDE]);
+	if(string::npos != str.find(TOKEN[DIV])){
+		pos =str.find(TOKEN[DIV]);
 		Temp = str.substr (pos);
 		Temp2 = str.substr (0,pos);
-		No = *(new Node(DIVIDE));
+		No = *(new Node(TOKEN[DIV]));
 		depois = Parse(Temp2);
 		No.setLeft(depois);
 		depois.setAbove(No);
 		depois = Parse(Temp);
 		No.setRight(depois);
-		depois.setAbove(No);
+		depois.setAbove(No);		
 	}
 	if(string::npos != str.find(TOKEN[EQUAL])){
 		pos =str.find(TOKEN[EQUAL]);
 		Temp = str.substr (pos);
 		Temp2 = str.substr (0,pos);
-		No = *(new Node(EQUAL));
+		No = *(new Node(TOKEN[EQUAL]));
 		depois = Parse(Temp2);
 		No.setLeft(depois);
 		depois.setAbove(No);
 		depois = Parse(Temp);
 		No.setRight(depois);
-		depois.setAbove(No);
+		depois.setAbove(No);		
 	}
 	if(string::npos != str.find(TOKEN[PRINT])){
-		//controle::Control::getInstance().enablePrint();
+		controle::Control::getInstance().enablePrint();		
 	}
 
 	}

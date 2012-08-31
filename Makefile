@@ -1,6 +1,6 @@
 #------------------------------------------------------------------------------
 
-SOURCE=Kernel/Kernel.cpp Kernel/Kernel.h Grammar/Grammar.h Grammar/Grammar.cpp Control/Control.h Control/Control.cpp main.cpp 
+SOURCE=Kernel/Kernel.cpp Kernel/Kernel.h Interface/Interface.cpp Interface/Interface.h Grammar/Grammar.h Grammar/Grammar.cpp Control/Control.h Control/Control.cpp main.cpp 
 TEST1 = Kernel/Test1.cpp
 TEST1P = test1
 MYPROGRAM=Calculadora
