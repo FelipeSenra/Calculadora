@@ -1,18 +1,34 @@
 # depslib dependency file v1.0
-1338124516 source:/home/felipe/Calculadora/Control/Control.cpp
-	<iostream>
-	"Control.h"
-
-1338129781 /home/felipe/Calculadora/Control/Control.h
-	<string>
-
-1338121569 source:/home/felipe/Calculadora/Grammar/Grammar.cpp
+1338502306 source:e:\calculadora\grammar\grammar.cpp
 	"Grammar.h"
+	<cctype>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<sstream>
+	<string>
+	"..\Control\Control.h"
 
-1338128819 /home/felipe/Calculadora/Grammar/Grammar.h
+1338500200 e:\calculadora\grammar\grammar.h
 	<string>
 
-1338129287 source:/home/felipe/Calculadora/Kernel/Kernel.cpp
+1338496050 source:e:\calculadora\interface\interface.cpp
+	<string>
+	<iostream>
+	<vector>
+	"Interface.h"
+
+1338418986 e:\calculadora\interface\interface.h
+	"../Control/Control.h"
+	<string>
+	<iostream>
+	<vector>
+
+1338417974 e:\calculadora\control\control.h
+	<string>
+
+1338501108 source:e:\calculadora\kernel\kernel.cpp
 	"Kernel.h"
 	"../Grammar/Grammar.h"
 	<string>
@@ -20,25 +36,150 @@
 	<iostream>
 	<stdexcept>
 	<vector>
+	<cmath>
 
-1338125254 /home/felipe/Calculadora/Kernel/Kernel.h
+1338418568 e:\calculadora\kernel\kernel.h
 	"../Grammar/Grammar.h"
 	"../Control/Control.h"
 	<string>
 	<vector>
 
-1338122426 source:/home/felipe/Calculadora/Kernel/Test1.cpp
-	<iostream>
+1338417278 source:e:\calculadora\kernel\test1.cpp
 
-1338128395 source:/home/felipe/Calculadora/Interface/Interface.cpp
+1338498078 source:e:\calculadora\main.cpp
+	<iostream>
+	<string>
+	<exception>
+	"Grammar/Grammar.h"
+	"Interface/Interface.h"
+	"Control/Control.h"
+	"Kernel/Kernel.h"
+
+1338418064 source:e:\calculadora\control\control.cpp
+	<iostream>
+	"Control.h"
+
+1343926301 source:c:\users\fribeiro\desktop\calculadora\grammar\grammar.cpp
+	"Grammar.h"
+	<cctype>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<sstream>
+	<string>
+	"..\Control\Control.h"
+
+1343841979 c:\users\fribeiro\desktop\calculadora\grammar\grammar.h
+	<string>
+
+1340134816 c:\users\fribeiro\desktop\calculadora\control\control.h
+	<string>
+
+1340298680 source:c:\users\fribeiro\desktop\calculadora\interface\interface.cpp
 	<string>
 	<iostream>
 	<vector>
 	"Interface.h"
-
-1338128106 /home/felipe/Calculadora/Interface/Interface.h
 	"../Control/Control.h"
+
+1340295390 c:\users\fribeiro\desktop\calculadora\interface\interface.h
+	"../Control/Control.h"
+	"../Grammar/Grammar.h"
 	<string>
 	<iostream>
 	<vector>
+
+1343841439 source:c:\users\fribeiro\desktop\calculadora\kernel\kernel.cpp
+	"Kernel.h"
+	"../Grammar/Grammar.h"
+	<string>
+	<vector>
+	<iostream>
+	<stdexcept>
+	<vector>
+	<cmath>
+
+1343740203 c:\users\fribeiro\desktop\calculadora\kernel\kernel.h
+	"../Grammar/Grammar.h"
+	"../Control/Control.h"
+	<string>
+	<map>
+
+1338417278 source:c:\users\fribeiro\desktop\calculadora\kernel\test1.cpp
+
+1343841584 source:c:\users\fribeiro\desktop\calculadora\main.cpp
+	<iostream>
+	<string>
+	<exception>
+	"Grammar/Grammar.h"
+	"Interface/Interface.h"
+	"Control/Control.h"
+	"Kernel/Kernel.h"
+
+1338418064 source:c:\users\fribeiro\desktop\calculadora\control\control.cpp
+	<iostream>
+	"Control.h"
+
+1346083357 source:c:\users\felipe\desktop\calculadora\grammar\grammar.cpp
+	"Grammar.h"
+	<cctype>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<sstream>
+	<string>
+	"..\Control\Control.h"
+
+1343841980 c:\users\felipe\desktop\calculadora\grammar\grammar.h
+	<string>
+
+1340134816 c:\users\felipe\desktop\calculadora\control\control.h
+	<string>
+
+1346084286 source:c:\users\felipe\desktop\calculadora\interface\interface.cpp
+	<string>
+	<iostream>
+	<vector>
+	"Interface.h"
+	"../Control/Control.h"
+
+1345476592 c:\users\felipe\desktop\calculadora\interface\interface.h
+	"../Control/Control.h"
+	"../Grammar/Grammar.h"
+	<string>
+	<iostream>
+	<vector>
+
+1346083357 source:c:\users\felipe\desktop\calculadora\kernel\kernel.cpp
+	"Kernel.h"
+	"../Grammar/Grammar.h"
+	<string>
+	<vector>
+	<iostream>
+	<stdexcept>
+	<vector>
+	<cmath>
+
+1345468163 c:\users\felipe\desktop\calculadora\kernel\kernel.h
+	"../Grammar/Grammar.h"
+	"../Control/Control.h"
+	<string>
+	<map>
+
+1338417278 source:c:\users\felipe\desktop\calculadora\kernel\test1.cpp
+
+1346083686 source:c:\users\felipe\desktop\calculadora\main.cpp
+	<iostream>
+	<string>
+	<exception>
+	"Grammar/Grammar.h"
+	"Interface/Interface.h"
+	"Control/Control.h"
+	"Kernel/Kernel.h"
+
+1338418064 source:c:\users\felipe\desktop\calculadora\control\control.cpp
+	<iostream>
+	"Control.h"
 

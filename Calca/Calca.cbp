@@ -7,8 +7,8 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Calca" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
+				<Option output="bin\Debug\Calca" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -16,8 +16,8 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Calca" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
+				<Option output="bin\Release\Calca" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -32,16 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../Control/Control.cpp" />
-		<Unit filename="../Control/Control.h" />
-		<Unit filename="../Grammar/Grammar.cpp" />
-		<Unit filename="../Grammar/Grammar.h" />
-		<Unit filename="../Interface/Interface.cpp" />
-		<Unit filename="../Interface/Interface.h" />
-		<Unit filename="../Kernel/Kernel.cpp" />
-		<Unit filename="../Kernel/Kernel.h" />
-		<Unit filename="../Kernel/Test1.cpp" />
-		<Unit filename="../main.cpp" />
+		<Unit filename="..\Control\Control.cpp" />
+		<Unit filename="..\Control\Control.h" />
+		<Unit filename="..\Grammar\Grammar.cpp" />
+		<Unit filename="..\Grammar\Grammar.h" />
+		<Unit filename="..\Interface\Interface.cpp" />
+		<Unit filename="..\Interface\Interface.h" />
+		<Unit filename="..\Kernel\Kernel.cpp" />
+		<Unit filename="..\Kernel\Kernel.h" />
+		<Unit filename="..\Kernel\Test1.cpp" />
+		<Unit filename="..\main.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
